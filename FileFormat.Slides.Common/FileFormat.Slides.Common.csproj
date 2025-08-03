@@ -4,8 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="newtonsoft.json" Version="13.0.3" />
+  </ItemGroup>
+
+  <!-- 
+   Should this be a relative path so people without a D drive can compile the code?
+  -->
+  <!--  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\Local_Repos\FileFormat.Slides\FileFormat.Slides.Common\FileFormat.Slides.Common.xml</DocumentationFile>
   </PropertyGroup>
+  -->
 
 </Project>

@@ -5,9 +5,14 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
    </PropertyGroup>
 
+  <!-- 
+   Should this be a relative path so people without a D drive can compile the code?
+  -->
+  <!--
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\Local_Repos\FileFormat.Slides\FileFormat.Slides\FileFormat.Slides.xml</DocumentationFile>
   </PropertyGroup>  
+  -->
 
   <ItemGroup>
     <ProjectReference Include="..\FileFormat.Slides.Common\FileFormat.Slides.Common.csproj" />

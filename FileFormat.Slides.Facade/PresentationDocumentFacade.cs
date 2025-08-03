@@ -564,8 +564,12 @@ namespace FileFormat.Slides.Facade
         {
             slideFacade.PresentationSlide.Save(slideFacade.SlidePart);
             _PresentationSlideParts.Add(slideFacade.SlidePart);
-            MoveSlideToIndex(slideFacade.SlideIndex, index);
 
+            // find the current index of the slide in the list and then move it to the specified index
+            var relationshipId = slideFacade.RelationshipId;
+            var currentIndex = _SlideIdList.Elements<SlideId>().ToList().FindIndex(item => item.RelationshipId == relationshipId);
+
+            MoveSlideToIndex(slideFacade.SlideIndex, index);
         }
 
         public void MoveSlideToIndex (int currentIndex, int newIndex)
